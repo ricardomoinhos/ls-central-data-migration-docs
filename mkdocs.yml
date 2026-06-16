@@ -1,0 +1,45 @@
+site_name: LS Central Data Migration - Technical Guide
+site_description: Step-by-step guide for LS Central data migration and upgrade paths
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Upgrade Paths:
+      - Version 14 to 25: upgrade-paths/v14-to-25.md
+      - Version 15-24 to 25: upgrade-paths/v15-24-to-v25.md
+      - Version 25 or later to latest: upgrade-paths/v25-or-later-to-latest.md
+  - Troubleshooting: troubleshooting.md
+  - Reference:
+      - Appendix: appendix.md
+      - Version history: version-history.md
