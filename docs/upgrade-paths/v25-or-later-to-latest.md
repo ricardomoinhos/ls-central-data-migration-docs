@@ -507,11 +507,11 @@ Folder structure after running these commands:
 
 ![image_9.png](../assets/images/image_9.png)
 
-* License
-  * Copy the partner license here and name it DEV.bclicense;
-  * More info: Please open Readme.txt file;
-* MigrationFiles
-  * Folder where all the symbols and extension compiled files should be copied to;
+- License
+    - Copy the partner license here and name it DEV.bclicense;
+    - More info: Please open Readme.txt file;
+- MigrationFiles
+    - Folder where all the symbols and extension compiled files should be copied to;
 
 ## Executing the upgrade
 
