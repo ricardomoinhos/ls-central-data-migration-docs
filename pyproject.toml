@@ -1,11 +1,10 @@
 [project]
 name = "ls-central-data-migration-guide"
 version = "0.1.0"
-description = "MkDocs site for the LS Central Data Migration Technical Guide"
+description = "Zensical site for the LS Central Data Migration Technical Guide"
 requires-python = ">=3.11"
 dependencies = [
-  "mkdocs>=1.6,<2.0",
-  "mkdocs-material>=9.5,<10.0",
+  "zensical>=0.0.45,<0.1.0",
   "pymdown-extensions>=10.0,<11.0",
 ]
 

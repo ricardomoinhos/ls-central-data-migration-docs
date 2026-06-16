@@ -1,0 +1,5 @@
+.git
+.github
+.uv-cache
+site
+__pycache__
