@@ -18,9 +18,9 @@ The process for upgrading is similar for a single-tenant and multitenant deploym
   - [Using the preparation script](#using-the-preparation-script)
     - [Create the folder structure with the extensions needed for the upgrade](#create-the-folder-structure-with-the-extensions-needed-for-the-upgrade)
   - [Executing the upgrade](#executing-the-upgrade)
-    - [Task 2 – Install version 28](#task-2--install-version-28)
-    - [Task 3 – Upgrade permission sets](#task-3--upgrade-permission-sets)
-    - [Task 4 – Prepare the existing databases](#task-4--prepare-the-existing-databases)
+    - [Task 2 – Install version 28](#task-2-install-version-28)
+    - [Task 3 – Upgrade permission sets](#task-3-upgrade-permission-sets)
+    - [Task 4 – Prepare the existing databases](#task-4-prepare-existing-databases)
     - [Task 5: Convert application database to version 28](#task-5-convert-application-database-to-version-28)
     - [Task 6: Configure version 28 server](#task-6-configure-version-28-server)
     - [Task 7: Import version 28 license](#task-7-import-version-28-license)
@@ -260,7 +260,7 @@ New-UpgradeInitializationScript
 > Enter x to start over
 > Enter z to go back
 >
-> Enter version number (format major[.minor[.build[.release]]]) 25.0
+> Enter version number (format major\[.minor\[.build\[.release\]\]\]) 25.0
 >
 > <font color="green">**25.0 selected**</font>
 
@@ -359,7 +359,7 @@ New-UpgradeInitializationScript
 > Enter x to start over
 > Enter z to go back
 >
-> Enter version number (format major[.minor[.build[.release]]]) 28.0
+> Enter version number (format major\[.minor\[.build\[.release\]\]\]) 28.0
 >
 > <font color="green">**28.0 selected**</font>
 
@@ -515,13 +515,13 @@ Folder structure after running these commands:
 
 ## Executing the upgrade
 
-### Task 2 – Install version 28
+### Task 2 – Install version 28 { #task-2-install-version-28 }
 https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade/upgrade-unmodified-application-to-v28#task-2-install-version-28
 
-### Task 3 – Upgrade permission sets
+### Task 3 – Upgrade permission sets { #task-3-upgrade-permission-sets }
 https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade/upgrade-unmodified-application-to-v28#task-3-upgrade-permission-sets
 
-### Task 4 – Prepare the existing databases
+### Task 4 – Prepare the existing databases { #task-4-prepare-existing-databases }
 
 Open the Preparation-Script.ps1 file on your favorite Powershell IDE (e.g. VS Code or Powershell ISE) and execute the commands below.
 
@@ -622,7 +622,7 @@ Output:
 > WARNING: The new settings value will not take effect until you stop and restart the service.
 > 
 > ServerInstance : MicrosoftDynamicsNavServer$BC250
-> DisplayName    : Microsoft Dynamics 365 Business Central Server [BC250]
+> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]
 > State          : Running
 > ServiceAccount : NT AUTHORITY\NETWORK SERVICE
 > Version        : 25.0.xxxxx.xxxxx
@@ -641,7 +641,7 @@ Output:
 > WARNING: Importing a license file requires a restart of other services using the same database.
 > 
 > ServerInstance : MicrosoftDynamicsNavServer$BC250
-> DisplayName    : Microsoft Dynamics 365 Business Central Server [BC250]
+> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]
 > State          : Running
 > ServiceAccount : NT AUTHORITY\NETWORK SERVICE
 > Version        : 25.0.xxxxx.xxxxx

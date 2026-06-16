@@ -3,17 +3,17 @@
 ## Table of Contents <!-- omit from toc -->
 
 - [Troubleshooting](#troubleshooting)
-  - [Error 1 - Start-NAVAppDataUpgrade : Could not upgrade the extension 'System Application'](#error-1---start-navappdataupgrade--could-not-upgrade-the-extension-system-application)
+  - [Error 1 - System Application upgrade failed](#error-1-system-application-upgrade-failed)
   - [Error 2](#error-2)
   - [Error 3](#error-3)
   - [Error 4](#error-4)
   - [Error 5](#error-5)
-  - [Error 6 - User must be a member of the 'SUPER' group](#error-6---user-must-be-a-member-of-the-super-group)
-  - [Error 7 - Error related to method ChangeNoStockPostingToNonInventoryType in LS Central Upgrade codeunit](#error-7---error-related-to-method-changenostockpostingtononinventorytype-in-ls-central-upgrade-codeunit)
-  - [Error 8 - Unexisting codeunit object with emit version 23030](#error-8---unexisting-codeunit-object-with-emit-version-23030)
-  - [Error 9 - The term 'Invoke-NAVApplicationDatabaseConversion' is not recognized as the name of a cmdlet, function, script or program](#error-9---the-term-invoke-navapplicationdatabaseconversion-is-not-recognized-as-the-name-of-a-cmdlet-function-script-or-program)
+  - [Error 6 - Missing SUPER permissions](#error-6-missing-super-permissions)
+  - [Error 7 - ChangeNoStockPostingToNonInventoryType failure](#error-7-change-no-stock-posting-failure)
+  - [Error 8 - Missing codeunit with emit version 23030](#error-8-missing-codeunit-23030)
+  - [Error 9 - Invoke-NAVApplicationDatabaseConversion not recognized](#error-9-navapplicationdatabaseconversion-not-recognized)
 
-## Error 1 - Start-NAVAppDataUpgrade : Could not upgrade the extension 'System Application'
+## Error 1: System Application upgrade failed { #error-1-system-application-upgrade-failed }
 
 ### Error Detail <!-- omit from toc -->
 
@@ -54,7 +54,7 @@ GlobalTriggerManagement(CodeUnit 49).GetDatabaseTableTriggerSetup line 7 - Base 
 
 ### Cause <!-- omit from toc -->
 
-This error occurs because metadata related to the older app extension is copied to table [Application Object Metadata] and is referring to the older tables naming instead of referring to the newer table naming.
+This error occurs because metadata related to the older app extension is copied to table \[Application Object Metadata\] and is referring to the older tables naming instead of referring to the newer table naming.
 This is happening because the older extensions were not properly removed when running the Uninstall-NAVApp on the Preparation-Script.ps1, probably due to some bug on Business Central.
 In this error we can see that the data upgrade routine complains about the table *Preaction Creation* that is now called **LSC Preaction Creation**
 To check it, run the following SQL query:
@@ -85,8 +85,8 @@ FROM [dbo].[NAV App Installed App]
 
 ![image_13.png](assets/images/image_13.png)
 
-Please note that there are two records on the [Application Object Metadata] table referring the table 99001671. There should only be one.
-Also note that the Package ID for the first record does not exist in the [NAV App Installed App] because this Package ID is related to the previous installed app version and should have been removed.
+Please note that there are two records on the \[Application Object Metadata\] table referring the table 99001671. There should only be one.
+Also note that the Package ID for the first record does not exist in the \[NAV App Installed App\] because this Package ID is related to the previous installed app version and should have been removed.
 
 ### Resolution <!-- omit from toc -->
 
@@ -389,7 +389,7 @@ Powershell commands:
 Please increase the number of hours if needed, depending on your database size.
 Restart the Business Central Service Tier after adjusting these settings.
 
-## Error 6 - User must be a member of the 'SUPER' group
+## Error 6: Missing SUPER permissions { #error-6-missing-super-permissions }
 
 ### Error Detail <!-- omit from toc -->
 
@@ -426,7 +426,7 @@ New-NavServerUserPermissionSet -WindowsAccount <domain user> -ServerInstance <se
 > [New-NAVServerUser (Microsoft.Dynamics.Nav.Management) - Dynamics NAV | Microsoft Docs](https://learn.microsoft.com/en-us/powershell/module/Microsoft.BusinessCentral.Management/New-NAVServerUser?view=businesscentral-ps-25)
 > [New-NAVServerUserPermissionSet (Microsoft.Dynamics.Nav.Management) - Dynamics NAV | Microsoft Docs](https://learn.microsoft.com/en-us/powershell/module/Microsoft.BusinessCentral.Management/New-NAVServerUserPermissionSet?view=businesscentral-ps-25)
 
-## Error 7 - Error related to method ChangeNoStockPostingToNonInventoryType in LS Central Upgrade codeunit
+## Error 7: ChangeNoStockPostingToNonInventoryType failure { #error-7-change-no-stock-posting-failure }
 
 ### Error Detail <!-- omit from toc -->
 
@@ -478,7 +478,7 @@ You need to delete the item from journals/documents stated above before going th
 > As a workaround, to avoid starting the process from the scratch, you can do it directly through SQL, but you must be aware that when you need to delete the line on the main table but also delete the corresponding record from the table with the same name but with the $ext suffix (it’s the table related to the table extensions from other apps other than the MS Base App.
 > Also be aware that doing this won’t delete records from related lines so you should only take this approach if you’re not concerned about the data integration at this point.
 
-## Error 8 - Unexisting codeunit object with emit version 23030
+## Error 8: Missing codeunit with emit version 23030 { #error-8-missing-codeunit-23030 }
 
 ### Error Detail <!-- omit from toc -->
 
@@ -508,7 +508,7 @@ You need to uninstall and unpublish the app (LS Central System App and/or LS Cen
 
 After running the **Sync-NAVApp** cmdlet, the Emit Version field should be fixed (shouldn't be 0) in the **Application Object Metadata** table and the error in Business Central/LS Central should be gone.
 
-## Error 9 - The term 'Invoke-NAVApplicationDatabaseConversion' is not recognized as the name of a cmdlet, function, script or program
+## Error 9: Invoke-NAVApplicationDatabaseConversion not recognized { #error-9-navapplicationdatabaseconversion-not-recognized }
 
 ### Error Detail <!-- omit from toc -->
 
