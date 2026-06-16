@@ -23,5 +23,7 @@
 | 1.0.0   | 2026-06-03 | Ricardo Moinhos   | Latest version updated from 24 to 25. Added additional migrated steps to migrated from v25 to latest (v28). |
 
 ## Related
-- [Upgrade v14](upgrade-paths/v14-to-25.md)
-- [Upgrade v15-24 -> v25](upgrade-paths/v15-24-to-v25.md)
+
+- [Upgrade from v14 to 25](upgrade-paths/v14-to-25.md)
+- [Upgrade from v15-24 to 25](upgrade-paths/v15-24-to-v25.md)
+- [Upgrade from v25 or later to latest](upgrade-paths/v25-or-later-to-latest.md)
