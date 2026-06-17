@@ -24,6 +24,6 @@
 
 ## Related
 
-- [Upgrade from v14 to 25](upgrade-paths/v14-to-25.md)
+- [Upgrade from v14 to 25](upgrade-paths/v14-to-v25.md)
 - [Upgrade from v15-24 to 25](upgrade-paths/v15-24-to-v25.md)
 - [Upgrade from v25 or later to latest](upgrade-paths/v25-or-later-to-latest.md)
