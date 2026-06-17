@@ -89,7 +89,7 @@ Import-Module LSMigrationTools -Force
 
 > LSMigrationTools version 1.0.0
 >
-> Welcome to the LS Migration Tools Shell!
+> Welcome to the LS Migration Tools Shell!  
 > For a complete list of Server cmdlets type
 >
 > `Get-Command -Module LSMigrationTools`
@@ -172,8 +172,8 @@ For both Option 1 and Option 2, the final output in the console will be similar 
 > |_|    \___/  \_/\_/  \___||_|   |___/|_| |_| \___||_||_| |_____/  \___||_|   |_|| .__/  \__||___/
 >                                                                                  |_|
 > ```
-> Preparation Powershell script file exported to C:\Upgrade\Preparation-Script.ps1
-> Migration Powershell script file exported to C:\Upgrade\Migration-Script.ps1
+> Preparation Powershell script file exported to C:\Upgrade\Preparation-Script.ps1  
+> Migration Powershell script file exported to C:\Upgrade\Migration-Script.ps1  
 > Config file exported to C:\Upgrade\config.json
 
 When the wizard is over, two script files are created in the current folder:
@@ -200,10 +200,10 @@ New-UpgradeAppsStructure -ImportSymbolsApp
 
 Output:
 
-> Configuration loaded on C:\Upgrade\config.json.
-> WARNING: Please open Readme.txt file in C:\Upgrade\License.
-> Created empty folder C:\Upgrade\MigrationFiles.
-> Created empty folder C:\Upgrade\Objects.
+> Configuration loaded on C:\Upgrade\config.json.  
+> WARNING: Please open Readme.txt file in C:\Upgrade\License.  
+> Created empty folder C:\Upgrade\MigrationFiles.  
+> Created empty folder C:\Upgrade\Objects.  
 > Upgrade folders structure successfully created.
 
 Folder structure after running these commands:
@@ -298,10 +298,10 @@ Invoke-NAVApplicationDatabaseConversion -DatabaseServer $fullDatabaseServer -Dat
 
 Output:
 
-> DatabaseServer      : localhost\sql2019
-> DatabaseName        : ls-w1-25-0-upg
-> DatabaseCredentials :
-> DatabaseLocation    :
+> DatabaseServer      : localhost\sql2019  
+> DatabaseName        : ls-w1-25-0-upg  
+> DatabaseCredentials :  
+> DatabaseLocation    :  
 > Collation           :
 
 ### Task 6: Configure version 28 server
@@ -318,17 +318,17 @@ Restart-NAVServerInstance -ServerInstance $toServerInstanceName
 
 Output:
 
-> WARNING: The new settings value will not take effect until you stop and restart the service.
-> WARNING: The new settings value will not take effect until you stop and restart the service.
-> WARNING: The new settings value will not take effect until you stop and restart the service.
-> WARNING: The new settings value will not take effect until you stop and restart the service.
-> WARNING: The new settings value will not take effect until you stop and restart the service.
+> WARNING: The new settings value will not take effect until you stop and restart the service.  
+> WARNING: The new settings value will not take effect until you stop and restart the service.  
+> WARNING: The new settings value will not take effect until you stop and restart the service.  
+> WARNING: The new settings value will not take effect until you stop and restart the service.  
+> WARNING: The new settings value will not take effect until you stop and restart the service.  
 > 
-> ServerInstance : MicrosoftDynamicsNavServer$BC250
-> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]
-> State          : Running
-> ServiceAccount : NT AUTHORITY\NETWORK SERVICE
-> Version        : 25.0.xxxxx.xxxxx
+> ServerInstance : MicrosoftDynamicsNavServer$BC250  
+> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
+> State          : Running  
+> ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
+> Version        : 25.0.xxxxx.xxxxx  
 > Default        : False
 
 ### Task 7: Import version 28 license
@@ -343,11 +343,11 @@ Output:
 
 > WARNING: Importing a license file requires a restart of other services using the same database.
 > 
-> ServerInstance : MicrosoftDynamicsNavServer$BC250
-> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]
-> State          : Running
-> ServiceAccount : NT AUTHORITY\NETWORK SERVICE
-> Version        : 25.0.xxxxx.xxxxx
+> ServerInstance : MicrosoftDynamicsNavServer$BC250  
+> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
+> State          : Running  
+> ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
+> Version        : 25.0.xxxxx.xxxxx  
 > Default        : False
 
 ### Task 8: Synchronize tenant
@@ -420,9 +420,9 @@ Set-NAVAddIn -ServerInstance $toServerInstanceName -AddinName 'Microsoft.Dynamic
 Set-NAVAddIn -ServerInstance $toServerInstanceName -AddinName 'Microsoft.Dynamics.Nav.Client.WelcomeWizard' -PublicKeyToken 31bf3856ad364e35 -ResourceFile (Join-Path $servicesAddinsFolder 'WelcomeWizard\Microsoft.Dynamics.Nav.Client.WelcomeWizard.zip')
 ```
 
-> If you get an error related to some of these add-ins, like:
+> If you get an error related to some of these add-ins, like:  
 > `The Add-in does not exist. Identification fields and values: Add-in Name='Microsoft.Dynamics.Nav.Client.SatisfactionSurvey',Public Key
-Token='31bf3856ad364e35',Version=''`
+Token='31bf3856ad364e35',Version=''`  
 > Just ignore and do not run that specific line on the script.
 
 ### Task 14: Install upgraded permissions sets
@@ -430,7 +430,7 @@ Token='31bf3856ad364e35',Version=''`
 
 ### Post-upgrade tasks
 
-> Check remaining Post-upgrade tasks in Microsoft documentation:
+> Check remaining Post-upgrade tasks in Microsoft documentation:  
 > https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade/upgrade-unmodified-application-to-v28#post-upgrade-tasks
 
 #### Updating the application version shown on the Help and Support page

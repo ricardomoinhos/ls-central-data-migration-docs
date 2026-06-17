@@ -22,9 +22,9 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 >
 > Example: localhost or localhost\MSSQLSERVER, where localhost would be the SQL Server and MSSQLSERVER would be the instance.
 >
-> ! accept default answers for the remaining questions
-> Enter x to start over
-> Enter z to go back
+> ! accept default answers for the remaining questions  
+> Enter x to start over  
+> Enter z to go back  
 >
 > SQL Server name: (default localhost) localhost\SQL2019
 >
@@ -44,7 +44,7 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 >
 > Enter the name of the database that's going to be upgraded.
 >
-> Enter x to start over
+> Enter x to start over  
 > Enter z to go back
 >
 > Database Name: ls-w1-14-02-upg
@@ -64,9 +64,9 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > What version of LS Central are you upgrading from?
 > 
-> ! accept default answers for the remaining questions
-> Enter x to start over
-> Enter z to go back
+> ! accept default answers for the remaining questions  
+> Enter x to start over  
+> Enter z to go back  
 > 
 > From LS Version: (14.2, 15.0, 15.1, 15.2, 15.3, 16.0, 16.1, 16.2, 16.3, 16.4, 17.0, 17.1, 17.2, 17.3, 17.4, 17.5, 18.0, 18.1, 18.2, 18.3) (default 14.2)
 > 
@@ -87,8 +87,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > a Specific Business Central OnPrem build (requires version number)
 > 
-> ! accept default answers for the remaining questions
-> x start over
+> ! accept default answers for the remaining questions  
+> x start over  
 > z go back
 > 
 > From BC Version (default a)
@@ -98,12 +98,12 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 
 **From BC Version (2nd step)**
 
-> Specify version number.
-> If you specify a full version number (like 15.4.41023.41345), you will get the closest version.
+> Specify version number.  
+> If you specify a full version number (like 15.4.41023.41345), you will get the closest version.  
 > If multiple versions matches the entered value, you will be asked to select
 >
-> Enter x to start over
-> Enter z to go back
+> Enter x to start over  
+> Enter z to go back  
 >
 > Enter version number (format major\[.minor\[.build\[.release\]\]\]) 14.28
 >
@@ -122,8 +122,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 >
 > Enter the name of the NAV/BC server instance name for the original NAV/BC version.
 >
-> Enter x to start over
-> Enter z to go back
+> Enter x to start over  
+> Enter z to go back  
 >
 > Original NAV/BC version Service Instance Name: BC140
 >
@@ -142,8 +142,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > Enter the path for the NAV/BC service version you're upgrading from. Example: C:\Program Files\Microsoft Dynamics 365 Business Central\140
 > 
-> ! accept default answers for the remaining questions
-> Enter x to start over
+> ! accept default answers for the remaining questions  
+> Enter x to start over  
 > Enter z to go back
 > 
 > From BC Server Path: (default C:\Program Files\Microsoft Dynamics 365 Business Central\140)
@@ -184,8 +184,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > What version of LS Central are you upgrading to?
 > 
-> ! accept default answers for the remaining questions
-> Enter x to start over
+> ! accept default answers for the remaining questions  
+> Enter x to start over  
 > Enter z to go back
 > 
 > To LS Version: (24.0, 24.1) (default 24.1)
@@ -207,8 +207,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > a Specific Business Central OnPrem build (requires version number)
 > 
-> ! accept default answers for the remaining questions
-> x start over
+> ! accept default answers for the remaining questions  
+> x start over  
 > z go back
 > 
 > To BC Version: (default a)
@@ -218,11 +218,11 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 
 **To BC Version (2nd Step)**
 
-> Specify version number.
-> If you specify a full version number (like 15.4.41023.41345), you will get the closest version.
+> Specify version number.  
+> If you specify a full version number (like 15.4.41023.41345), you will get the closest version.  
 > If multiple versions matches the entered value, you will be asked to select
 >
-> Enter x to start over
+> Enter x to start over  
 > Enter z to go back
 >
 > Enter version number (format major\[.minor\[.build\[.release\]\]\]) 24.0
@@ -244,7 +244,7 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 >
 > Enter the name of the BC server instance name for the new BC version
 >
-> Enter x to start over
+> Enter x to start over  
 > Enter z to go back
 >
 > New BC version Service Instance Name: BC240
@@ -264,8 +264,8 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > Enter the path for the NAV/BC service version you're upgrading to. Example: C:\Program Files\Microsoft Dynamics 365 Business Central\240
 > 
-> ! accept default answers for the remaining questions
-> Enter x to start over
+> ! accept default answers for the remaining questions  
+> Enter x to start over  
 > Enter z to go back
 > 
 > To BC Server Path: (default C:\Program Files\Microsoft Dynamics 365 Business Central\240)
@@ -287,12 +287,12 @@ This page walks through each step of the `New-UpgradeInitializationScript` wizar
 > 
 > Custom extensions:
 > 
-> a Add custom extension
-> b Remove custom extension
+> a Add custom extension  
+> b Remove custom extension  
 > c Continue to next step.
 > 
-> ! accept default answers for the remaining questions
-> x start over
+> ! accept default answers for the remaining questions  
+> x start over  
 > z go back
 > 
 > Do you want to add or remove custom extensions to the script? (default c)
@@ -314,11 +314,11 @@ Add your custom extensions if applicable.
 >
 > Indicate if you're setting up a single or multitenant environment.
 >
-> a Yes, it's a multi tenant environment.
+> a Yes, it's a multi tenant environment.  
 > b No, it's a single tenant environment.
 >
-> ! accept default answers for the remaining questions
-> x start over
+> ! accept default answers for the remaining questions  
+> x start over  
 > z go back
 >
 > Are you setting up a multitenancy environment? (default b)
