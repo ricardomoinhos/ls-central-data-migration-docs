@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Upgrading From Version 25-27 up to Version 28 (latest)
 
 This article describes how to upgrade from version 25-27 up to latest (version 28) solution that uses the Microsoft system and base applications.

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # New-UpgradeInitializationScript Wizard - Step by Step - v14 to v25 example
 
 This page walks through each step of the `New-UpgradeInitializationScript` wizard, showing the prompts and example input values for an upgrade from version 14 to LS Central 25.

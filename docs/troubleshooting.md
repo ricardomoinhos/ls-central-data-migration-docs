@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Troubleshooting
 
 ## Table of Contents <!-- omit from toc -->
