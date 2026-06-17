@@ -189,7 +189,7 @@ The preparation script contains multiple commands available in the LS Migration 
 
 - Create the folder structure with the extensions needed for the upgrade;
 
-> Open the Preparation-Script.ps1 file on your favorite Powershell IDE (e.g. VS Code or Powershell ISE) and execute the commands below.
+Open the Preparation-Script.ps1 file on your favorite Powershell IDE (e.g. VS Code or Powershell ISE) and execute the commands below.
 
 ### Create the folder structure with the extensions needed for the upgrade
 
@@ -228,7 +228,8 @@ https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade
 
 Open the Preparation-Script.ps1 file on your favorite Powershell IDE (e.g. VS Code or Powershell ISE) and execute the commands below.
 
-> You should run directly from the Preparation-Script.ps1 file.
+!!! warning
+    You should run directly from the Preparation-Script.ps1 file.
 
 ```powershell
 $fromServerInstanceName = "ls-w1-25-0-upg"
