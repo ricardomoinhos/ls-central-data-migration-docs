@@ -5,3 +5,16 @@
 .md-typeset {
   font-size: 0.65rem;
 }
+
+/* output */
+.md-typeset .admonition.output,
+.md-typeset details.output {
+  color: white;
+  background-color: rgb(0, 34, 107);
+  border-radius: 0.0rem;
+}
+
+.md-typeset .output > .admonition-title,
+.md-typeset .output > summary {
+    color: white;
+}
