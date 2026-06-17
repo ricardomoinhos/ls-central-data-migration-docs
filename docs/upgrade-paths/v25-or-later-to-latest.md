@@ -297,13 +297,14 @@ Execute tasks on Microsoft documentation, starting at task 5.
 Invoke-NAVApplicationDatabaseConversion -DatabaseServer $fullDatabaseServer -DatabaseName $databaseName -Force
 ```
 
-Output:
+**Output:**
 
-> DatabaseServer      : localhost\sql2019  
-> DatabaseName        : ls-w1-25-0-upg  
-> DatabaseCredentials :  
-> DatabaseLocation    :  
-> Collation           :
+!!! output ""
+    DatabaseServer      : localhost\sql2019  
+    DatabaseName        : ls-w1-25-0-upg  
+    DatabaseCredentials :  
+    DatabaseLocation    :  
+    Collation           :
 
 ### Task 6: Configure version 28 server
 
@@ -317,20 +318,23 @@ Set-NavServerConfiguration -ServerInstance $toServerInstanceName -KeyName Enable
 Restart-NAVServerInstance -ServerInstance $toServerInstanceName
 ```
 
-Output:
+**Output:**
 
-> WARNING: The new settings value will not take effect until you stop and restart the service.  
-> WARNING: The new settings value will not take effect until you stop and restart the service.  
-> WARNING: The new settings value will not take effect until you stop and restart the service.  
-> WARNING: The new settings value will not take effect until you stop and restart the service.  
-> WARNING: The new settings value will not take effect until you stop and restart the service.  
-> 
-> ServerInstance : MicrosoftDynamicsNavServer$BC250  
-> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
-> State          : Running  
-> ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
-> Version        : 25.0.xxxxx.xxxxx  
-> Default        : False
+!!! output ""
+    <font color="orange">
+    WARNING: The new settings value will not take effect until you stop and restart the service.  
+    WARNING: The new settings value will not take effect until you stop and restart the service.  
+    WARNING: The new settings value will not take effect until you stop and restart the service.  
+    WARNING: The new settings value will not take effect until you stop and restart the service.  
+    WARNING: The new settings value will not take effect until you stop and restart the service.  
+    </font>
+    
+    ServerInstance : MicrosoftDynamicsNavServer$BC250  
+    DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
+    State          : Running  
+    ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
+    Version        : 25.0.xxxxx.xxxxx  
+    Default        : False
 
 ### Task 7: Import version 28 license
 
@@ -340,16 +344,18 @@ Import-NAVServerLicense -ServerInstance $toServerInstanceName -LicenseFile "$lic
 Restart-NAVServerInstance -ServerInstance $toServerInstanceName
 ```
 
-Output:
+**Output:**
 
-> WARNING: Importing a license file requires a restart of other services using the same database.
-> 
-> ServerInstance : MicrosoftDynamicsNavServer$BC250  
-> DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
-> State          : Running  
-> ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
-> Version        : 25.0.xxxxx.xxxxx  
-> Default        : False
+!!! output ""
+
+    <font color="orange">WARNING: Importing a license file requires a restart of other services using the same database.</font>
+    
+    ServerInstance : MicrosoftDynamicsNavServer$BC250  
+    DisplayName    : Microsoft Dynamics 365 Business Central Server \[BC250\]  
+    State          : Running  
+    ServiceAccount : NT AUTHORITY\NETWORK SERVICE  
+    Version        : 25.0.xxxxx.xxxxx  
+    Default        : False
 
 ### Task 8: Synchronize tenant
 
@@ -421,18 +427,19 @@ Set-NAVAddIn -ServerInstance $toServerInstanceName -AddinName 'Microsoft.Dynamic
 Set-NAVAddIn -ServerInstance $toServerInstanceName -AddinName 'Microsoft.Dynamics.Nav.Client.WelcomeWizard' -PublicKeyToken 31bf3856ad364e35 -ResourceFile (Join-Path $servicesAddinsFolder 'WelcomeWizard\Microsoft.Dynamics.Nav.Client.WelcomeWizard.zip')
 ```
 
-> If you get an error related to some of these add-ins, like:  
-> `The Add-in does not exist. Identification fields and values: Add-in Name='Microsoft.Dynamics.Nav.Client.SatisfactionSurvey',Public Key
-Token='31bf3856ad364e35',Version=''`  
-> Just ignore and do not run that specific line on the script.
+!!! info
+    If you get an error related to some of these add-ins, like:  
+    `The Add-in does not exist. Identification fields and values: Add-in Name='Microsoft.Dynamics.Nav.Client.SatisfactionSurvey',Public Key
+    Token='31bf3856ad364e35',Version=''`  
+    Just ignore and do not run that specific line on the script.
 
 ### Task 14: Install upgraded permissions sets
 <p style="background-color: yellow">…</p>
 
 ### Post-upgrade tasks
 
-> Check remaining Post-upgrade tasks in Microsoft documentation:  
-> https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade/upgrade-unmodified-application-to-v28#post-upgrade-tasks
+Check remaining Post-upgrade tasks in Microsoft documentation:  
+[Upgrade to Business Central 2026 release wave 1 (version 28) - Post Upgrade Tasks](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/upgrade/upgrade-unmodified-application-to-v28#post-upgrade-tasks)
 
 #### Updating the application version shown on the Help and Support page
 
