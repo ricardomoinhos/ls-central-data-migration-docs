@@ -21,6 +21,7 @@
 | 0.5.2   | 2024-12-20 | Ricardo Moinhos   | Fixed some typos where the documentation and the scripts generated using the wizard would not match. |
 | 0.5.3   | 2025-01-08 | Ricardo Moinhos   | Adding Error 9 to the Troubleshooting section related. |
 | 1.0.0   | 2026-06-03 | Ricardo Moinhos   | Latest version updated from 24 to 25. Added additional migrated steps to migrated from v25 to latest (v28). |
+| 1.0.1   | 2026-07-21 | Ricardo Moinhos   | Expanded the introduction page with guide purpose, scope, and tooling overview. Added an upgrade paths cross-navigation section to each upgrade path page. |
 
 ## Related
 

@@ -12,6 +12,12 @@ Please refer to the official Microsoft documentation for more information: [Upgr
 
 The process for upgrading is similar for a single-tenant and multitenant deployment. However, there are some inherent differences. With a single-tenant deployment, the application code and business data are in the same database. In a multitenant deployment, application code is in a separate database (the application database) than the business data (tenant). In the procedures that follow, for a single-tenant deployment, consider references to the application database and tenant database as the same database. Steps are marked as Single-tenant only or Multitenant only where applicable.
 
+## Upgrade paths
+
+- [Upgrading from version 14 to 25](v14-to-v25.md)
+- [Upgrading from version 15-24 to 25](v15-24-to-v25.md)
+- **Upgrading from version 25 or later to latest** (this page)
+
 ## Table of Contents <!-- omit from toc -->
 
 - [Upgrading From Version 25-27 up to Version 28 (latest)](#upgrading-from-version-25-27-up-to-version-28-latest)
